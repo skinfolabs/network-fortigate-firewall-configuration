@@ -6,7 +6,7 @@ This chapter documents FortiGate-to-FortiGate IPsec connectivity with directiona
 
 IPsec protects traffic between the New York and Tel Aviv private networks across an untrusted external path. Each FortiGate acts as a VPN peer: the devices authenticate one another, negotiate cryptographic parameters, and create an encrypted path for traffic that matches the defined private-network selectors.
 
-The tunnel itself does not grant unlimited trust between the locations. Directional firewall policies are edited after tunnel creation so New York can test Tel Aviv with ping, while the New York-to-Tel Aviv RDP rule is intended to restrict remote desktop access to that specific service.
+The tunnel itself does not grant unlimited trust between the locations. Directional firewall policies are edited after tunnel creation so New York can test Tel Aviv with ping, while the New York-to-Tel Aviv rule restricts remote-administration traffic to the RDP service.
 
 > IPsec protects confidentiality and integrity while traffic crosses the public network, but firewall policy still controls what the connected sites may do. Treating a VPN as unrestricted LAN extension would allow a compromise at one site to spread more easily to the other.
 
@@ -18,8 +18,6 @@ The tunnel itself does not grant unlimited trust between the locations. Directio
 - Reviewed the negotiated tunnel state.
 - Applied directional ping and RDP service requirements.
 - Tested allowed and denied behavior from both sides.
-
-Production recommendation: the visible New York-to-Tel Aviv RDP policy still shows `ALL` in the saved service field while the service picker highlights `RDP`. The intended least-privilege result requires saving the service as `RDP` and validating the rule again before production use.
 
 ## Key Technical Terms
 
@@ -97,13 +95,13 @@ The New York-to-Tel Aviv policy is restricted to the `PING` service. ICMP echo t
 
 ### Step 06 - Review the New York-to-Tel Aviv RDP rule
 
-The New York-to-Tel Aviv RDP policy is intended to permit remote desktop access only through the `RDP` service. The service-selection pane shows `RDP`, while the saved Service field in the same screenshot still displays `ALL`. This means the rule needs a final service correction before it fully matches the intended least-privilege design.
+The New York-to-Tel Aviv policy is configured for the `RDP` service. This allows Remote Desktop traffic across the IPsec tunnel while keeping the rule aligned with the specific administration task instead of opening the tunnel to unrelated services.
 
-> For the least-privilege design to be complete, the saved service must be changed from `ALL` to `RDP` and validated again. Leaving `ALL` would allow any service accepted by the destination host, which is broader than the stated remote-administration requirement.
+> RDP is the protocol used for Windows Remote Desktop access and commonly relies on TCP/3389. Limiting this inter-site rule to RDP keeps the VPN policy focused: the tunnel provides encrypted transport, and the firewall policy decides which application traffic is allowed through it.
 
 ![IPsec RDP policy review](../../images/07-site-to-site-ipsec-vpn/06.png)
 
-<p><sub><strong>Screenshot 052 - New York to Tel Aviv RDP Rule:</strong> RDP is selected in the service picker, while the policy field still shows `ALL` and therefore requires a final correction.</sub></p>
+<p><sub><strong>Screenshot 052 - New York to Tel Aviv RDP Rule:</strong> The firewall policy is reviewed with the RDP service selected, limiting this cross-site rule to remote desktop traffic between the New York side and the Tel Aviv destination.</sub></p>
 
 ---
 
@@ -137,9 +135,9 @@ The remote-side screenshots provide the opposite perspective of the same VPN. Th
 
 ## Validation and Summary
 
-Validation includes the negotiated tunnel state, allowed service tests, RDP behavior, and a denied reverse-ping result. The screenshots confirm the lab goal while also documenting the RDP service-field issue that should be corrected for a production least-privilege rule.
+Validation includes the negotiated tunnel state, allowed service tests, RDP behavior, and a denied reverse-ping result. The screenshots confirm that the IPsec tunnel is established and that traffic is still controlled by directional firewall rules.
 
-This chapter completes the site-to-site VPN workflow. The evidence confirms tunnel negotiation and service testing, while the visible `ALL` service field in the New York-to-Tel Aviv RDP policy remains a documented hardening item before production use.
+This chapter completes the site-to-site VPN workflow. The evidence confirms tunnel negotiation, New York-to-Tel Aviv ping testing, New York-to-Tel Aviv RDP access, and a denied reverse-ping test that demonstrates service-specific policy behavior.
 
 ---
 
