@@ -2,7 +2,6 @@
 
 This chapter documents internal IIS publishing through a FortiGate Virtual IP and an inbound firewall policy. It separates local web-server validation from external access through destination NAT.
 
-
 ## Technical Context
 
 The internal IIS portal is published through a FortiGate Virtual IP. In this design, the VIP performs **destination NAT**: traffic sent to the external address is translated and forwarded to the private address of the IIS server. The Virtual IP defines the address translation, while a separate WAN-to-LAN firewall policy decides whether the inbound service is allowed.

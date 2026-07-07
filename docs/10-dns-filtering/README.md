@@ -2,7 +2,6 @@
 
 This chapter documents DNS Filtering for controlled domain blocking and DNS-filter log validation. It focuses on decisions made at the name-resolution layer before a browser completes normal access to a domain.
 
-
 ## Technical Context
 
 DNS filtering evaluates domain-resolution requests before the client establishes the full application connection. FortiGate can compare queried names with FortiGuard threat intelligence, block domains associated with botnet or command-and-control activity, and apply organization-defined static rules for controlled destinations.

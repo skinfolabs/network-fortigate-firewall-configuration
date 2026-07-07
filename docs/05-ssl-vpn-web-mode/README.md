@@ -2,7 +2,6 @@
 
 This chapter documents SSL VPN Web Mode for a more focused browser-based remote-access workflow. HR users authenticate with LDAP credentials and receive a published RDP bookmark instead of a general routed tunnel.
 
-
 ## Technical Context
 
 SSL VPN Web Mode provides browser-based access to selected internal services without giving the endpoint a general routed tunnel. In this exercise, LDAP-authenticated HR users sign in to the FortiGate portal and receive an RDP bookmark that represents one approved internal workstation.

@@ -2,7 +2,6 @@
 
 This chapter documents FortiGate-to-FortiGate IPsec connectivity with directional service restrictions. It shows that an encrypted tunnel and a least-privilege inter-site policy are related but separate security controls.
 
-
 ## Technical Context
 
 IPsec protects traffic between the New York and Tel Aviv private networks across an untrusted external path. Each FortiGate acts as a VPN peer: the devices authenticate one another, negotiate cryptographic parameters, and create an encrypted path for traffic that matches the defined private-network selectors.

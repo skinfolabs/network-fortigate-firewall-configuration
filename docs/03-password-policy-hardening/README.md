@@ -2,7 +2,6 @@
 
 This chapter documents local FortiGate password-policy hardening for administrator credentials and IPsec pre-shared keys. It separates the lab enforcement baseline from the stronger credential controls expected in a production firewall deployment.
 
-
 ## Technical Context
 
 Password controls reduce the chance that locally managed FortiGate credentials or IPsec pre-shared keys can be guessed through dictionary, brute-force, or weak-password attacks. The configured policy requires at least eight characters and a mixture of uppercase letters, lowercase letters, numbers, and special symbols.

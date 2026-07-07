@@ -2,7 +2,6 @@
 
 This chapter covers outbound SSL/TLS inspection planning and policy attachment. It explains why encrypted traffic visibility matters and what the available evidence confirms.
 
-
 ## Technical Context
 
 Encrypted traffic protects confidentiality between a client and a remote service, but it can also hide downloads, web requests, or application behavior from ordinary firewall inspection. Full SSL/TLS inspection allows FortiGate to act as an inspection intermediary: it decrypts the permitted session, applies the selected security profiles, and re-encrypts the connection toward its destination.
@@ -49,7 +48,7 @@ The `Office_To_Internet_Inspection` profile is configured for full inspection us
 
 The profile is attached to the firewall policy carrying traffic from the office network toward the internet. This placement ensures that encrypted sessions matching the outbound rule are handed to the full-inspection profile before the later Web Filter, Antivirus, IPS, or Application Control decisions are made.
 
-> Creating a security profile does nothing until a matching firewall policy references it. The screenshot confirms policy attachment, but a separate client trust deployment and decrypted-session validation were not recorded, so the repository does not claim a complete production rollout.
+> Creating a security profile does nothing until a matching firewall policy references it. The screenshot confirms policy attachment; client trust deployment and decrypted-session testing remain separate production validation items.
 
 ![SSL inspection applied](../../images/08-ssl-tls-inspection/02.png)
 
@@ -59,7 +58,7 @@ The profile is attached to the firewall policy carrying traffic from the office 
 
 ## Validation and Summary
 
-Validation confirms that the full-inspection profile exists and is attached to the outbound policy. A complete production validation would additionally test certificate trust, browser behavior, inspected sessions, and security-profile detections over HTTPS.
+Validation confirms that the full-inspection profile exists and is attached to the outbound policy. Production validation would additionally test certificate trust, browser behavior, inspected sessions, and security-profile detections over HTTPS.
 
 This chapter completes the SSL/TLS inspection setup shown in the lab. The evidence confirms profile creation and policy attachment, while full production use would still require certificate trust deployment and compatibility testing.
 

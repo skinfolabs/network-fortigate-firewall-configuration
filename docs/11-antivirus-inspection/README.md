@@ -2,7 +2,6 @@
 
 This chapter documents flow-based FortiGate Antivirus inspection and safe test-sample validation. It demonstrates malware-prevention testing without introducing live malware into the lab environment.
 
-
 ## Technical Context
 
 FortiGate Antivirus scans supported application traffic for files and content that match known malicious signatures or other configured detection methods. The profile is placed on outbound office traffic so a workstation download can be inspected before the file reaches the endpoint.

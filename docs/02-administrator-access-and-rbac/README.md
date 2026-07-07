@@ -2,7 +2,6 @@
 
 This chapter documents FortiGate administrator role design. It shows how named accounts and restricted profiles reduce unnecessary privilege while preserving the access needed for monitoring, support, and controlled administration.
 
-
 ## Technical Context
 
 Administrative access is separated into named profiles instead of giving every operator unrestricted `super_admin` privileges. One profile demonstrates a powerful but selectively restricted administrator, while the IT profile provides view-only access to the operational areas required for monitoring and support.

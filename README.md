@@ -9,11 +9,13 @@
 
 ## Project Overview
 
-This project documents a FortiGate firewall lab focused on secure access, identity-aware policy design, VPN connectivity, internal service publishing, and layered threat prevention. FortiGate is used as the central enforcement point between the WAN, the internal LAN, remote VPN users, and protected internal services.
+This project documents a FortiGate firewall lab focused on secure access, identity-aware policy design, VPN connectivity, internal service publishing, and layered threat prevention. FortiGate acts as the central enforcement point between the WAN, the internal LAN, remote VPN users, and protected internal services.
 
-The lab demonstrates how several FortiGate capabilities work together in an enterprise-style workflow: administrator role-based access control, password hardening, LDAP integration, SSL VPN Tunnel Mode, SSL VPN Web Mode, Virtual IP publishing, site-to-site IPsec VPN, SSL/TLS inspection, web filtering, DNS filtering, antivirus inspection, intrusion prevention, application control, and quarantine.
+The walkthrough combines three security areas: administrative control, remote-access and publishing paths, and traffic inspection. It covers administrator RBAC, password hardening, LDAP integration, SSL VPN Tunnel Mode, SSL VPN Web Mode, Virtual IP publishing, site-to-site IPsec VPN, SSL/TLS inspection, web filtering, DNS filtering, antivirus inspection, intrusion prevention, application control, and quarantine.
 
-From a cybersecurity perspective, the project focuses on least privilege, controlled remote access, service-restricted firewall policy, encrypted traffic inspection, content filtering, malware-prevention testing, botnet/C2 protection, and validation through client behavior and FortiGate logs.
+The security focus is least privilege, controlled remote access, service-restricted firewall policy, encrypted traffic inspection, content filtering, malware-prevention testing, botnet/C2 protection, and validation through client behavior and FortiGate logs.
+
+> All accounts, addresses, certificates, and secrets shown in this repository are lab-only values from an isolated environment. They are preserved as project evidence and should not be reused in production.
 
 ## Objectives
 

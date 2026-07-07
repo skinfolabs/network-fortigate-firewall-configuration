@@ -2,7 +2,6 @@
 
 This chapter documents Active Directory LDAP integration, SSL VPN Tunnel Mode, FortiClient setup, and restricted RDP validation. It connects identity, remote-access portal settings, firewall policy, and the final internal desktop test into one end-to-end workflow.
 
-
 ## Technical Context
 
 SSL VPN Tunnel Mode gives a remote computer a protected network path into selected internal resources through FortiClient. Active Directory remains the identity authority, LDAP allows FortiGate to verify those directory users, and a FortiGate user group converts the directory membership into an object that VPN authentication and firewall policies can reference.

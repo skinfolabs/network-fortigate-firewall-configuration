@@ -2,7 +2,6 @@
 
 This chapter documents FortiGate Web Filtering with static URL blocks, category-based authentication, client testing, and log review. It shows how a profile becomes meaningful only after it is attached to the active outbound policy and validated from a workstation.
 
-
 ## Technical Context
 
 Web filtering controls browser access according to FortiGuard categories, explicit URL patterns, and authenticated user identity. The `Office_Web_Filter` profile is configured in proxy mode, allowing FortiGate to process the web request as an intermediary and apply more detailed actions before the connection is completed.

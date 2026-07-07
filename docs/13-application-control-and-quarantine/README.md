@@ -2,7 +2,6 @@
 
 This chapter documents Application Control and quarantine response for unauthorized remote-access behavior. It uses TeamViewer as the controlled application example and follows the path from profile creation to block logs and a temporary quarantine entry.
 
-
 ## Technical Context
 
 Application Control identifies traffic by application signatures rather than relying only on IP addresses and ports. This allows FortiGate to recognize TeamViewer as a remote-access application even when it uses common encrypted web protocols that would otherwise resemble ordinary HTTPS traffic.

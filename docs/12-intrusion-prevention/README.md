@@ -2,7 +2,6 @@
 
 This chapter documents Intrusion Prevention using an IPS sensor, controlled test traffic, and dropped-event validation. It distinguishes a generic connection failure from a FortiGate decision backed by an IPS log entry.
 
-
 ## Technical Context
 
 An Intrusion Prevention System examines network traffic for known exploit patterns, suspicious protocol behavior, and botnet indicators. Unlike passive detection, an IPS is placed inline and can drop a matching session before the traffic reaches its destination.
