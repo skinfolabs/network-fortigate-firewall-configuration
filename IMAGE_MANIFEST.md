@@ -53,7 +53,7 @@
 | Screenshot 049 | Yes | [`images/07-site-to-site-ipsec-vpn/03.png`](images/07-site-to-site-ipsec-vpn/03.png) | New York and Tel Aviv protected subnet selectors |
 | Screenshot 050 | Yes | [`images/07-site-to-site-ipsec-vpn/04.png`](images/07-site-to-site-ipsec-vpn/04.png) | Negotiated site-to-site tunnel shown in the VPN monitor |
 | Screenshot 051 | Yes | [`images/07-site-to-site-ipsec-vpn/05.png`](images/07-site-to-site-ipsec-vpn/05.png) | New York-to-Tel Aviv policy restricted to PING |
-| Screenshot 052 | Yes | [`images/07-site-to-site-ipsec-vpn/06.png`](images/07-site-to-site-ipsec-vpn/06.png) | Tel Aviv-to-New York policy with RDP selected but `ALL` still displayed |
+| Screenshot 052 | Yes | [`images/07-site-to-site-ipsec-vpn/06.png`](images/07-site-to-site-ipsec-vpn/06.png) | New York-to-Tel Aviv RDP policy with RDP selected but `ALL` still displayed |
 | Screenshot 053 | Yes | [`images/07-site-to-site-ipsec-vpn/07.png`](images/07-site-to-site-ipsec-vpn/07.png) | Combined command-line and RDP cross-site validation |
 | Screenshot 054 | Yes | [`images/07-site-to-site-ipsec-vpn/08.png`](images/07-site-to-site-ipsec-vpn/08.png) | Remote participant's RDP validation screen |
 | Screenshot 055 | Yes | [`images/07-site-to-site-ipsec-vpn/09.png`](images/07-site-to-site-ipsec-vpn/09.png) | Remote participant's blocked reverse-ping test |

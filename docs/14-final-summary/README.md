@@ -28,7 +28,7 @@ The project also records the difference between a working laboratory configurati
 - Replace the laboratory VPN certificate with a trusted certificate that matches the public VPN FQDN before exposing SSL VPN to real users.
 - Keep public web services separate from domain controllers. In this lab, IIS and Active Directory share AtlasAD only because the environment is isolated.
 - Restrict inbound destination NAT policies to the exact required services and source ranges where possible.
-- Correct the Tel Aviv-to-New York IPsec service field from `ALL` to `RDP` before treating that reverse policy as production-ready least privilege.
+- Correct the New York-to-Tel Aviv IPsec RDP service field from `ALL` to `RDP` before treating that policy as production-ready least privilege.
 - Distribute and test a trusted inspection CA before using full SSL/TLS inspection with managed users.
 - Review FortiOS firmware and security advisories before exposing any internet-facing firewall service. The lab screenshots show a critical-severity warning, but the exact FortiOS version is not recorded.
 
